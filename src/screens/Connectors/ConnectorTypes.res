@@ -135,6 +135,7 @@ type processorTypes =
   | AMAZONPAY
   | WORLDPAYMODULAR
   | SANTANDER
+  | TRUELAYER
 
 type payoutProcessorTypes =
   | ADYEN

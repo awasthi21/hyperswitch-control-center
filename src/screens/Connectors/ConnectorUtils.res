@@ -176,6 +176,7 @@ let connectorList: array<connectorTypes> = [
   Processors(AMAZONPAY),
   Processors(WORLDPAYMODULAR),
   Processors(SANTANDER),
+  Processors(TRUELAYER),
 ]
 
 let connectorListForLive: array<connectorTypes> = [
@@ -852,6 +853,10 @@ let santanderInfo = {
   description: "Banco Santander is a Spanish multinational financial services group founded in 1857, with a global retail and commercial banking presence across Europe and the Americas, serving millions of customers with banking, credit, investment, and payment services.",
 }
 
+let truelayerInfo = {
+  description: "TrueLayer is a global open banking platform that enables secure payments, instant bank transfers, and financial data access through open banking APIs, supporting payment initiation and account information services across Europe and beyond.",
+}
+
 let getConnectorNameString = (connector: processorTypes) =>
   switch connector {
   | ADYEN => "adyen"
@@ -961,6 +966,7 @@ let getConnectorNameString = (connector: processorTypes) =>
   | AMAZONPAY => "amazonpay"
   | WORLDPAYMODULAR => "worldpaymodular"
   | SANTANDER => "santander"
+  | TRUELAYER => "truelayer"
   }
 
 let getPayoutProcessorNameString = (payoutProcessor: payoutProcessorTypes) =>
@@ -1153,6 +1159,7 @@ let getConnectorNameTypeFromString = (connector, ~connectorType=ConnectorTypes.P
     | "amazonpay" => Processors(AMAZONPAY)
     | "worldpaymodular" => Processors(WORLDPAYMODULAR)
     | "santander" => Processors(SANTANDER)
+    | "truelayer" => Processors(TRUELAYER)
     | _ => UnknownConnector("Not known")
     }
   | PayoutProcessor =>
@@ -1323,6 +1330,7 @@ let getProcessorInfo = (connector: ConnectorTypes.processorTypes) => {
   | AMAZONPAY => amazonpayinfo
   | WORLDPAYMODULAR => worldpayModularInfo
   | SANTANDER => santanderInfo
+  | TRUELAYER => truelayerInfo
   }
 }
 
@@ -2289,6 +2297,7 @@ let getDisplayNameForProcessor = (connector: ConnectorTypes.processorTypes) =>
   | AMAZONPAY => "Amazon Pay"
   | WORLDPAYMODULAR => "Worldpay Modular"
   | SANTANDER => "Santander"
+  | TRUELAYER => "TrueLayer"
   }
 
 let getDisplayNameForPayoutProcessor = (payoutProcessor: ConnectorTypes.payoutProcessorTypes) =>
