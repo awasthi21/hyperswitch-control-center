@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file. See [conven
 
 - - -
 
+## 2026.02.27.0
+
+### Bug Fixes
+
+- Local timezone support for routing and api events ([#4256](https://github.com/juspay/hyperswitch-control-center/pull/4256)) ([`baab182`](https://github.com/juspay/hyperswitch-control-center/commit/baab182d532677e644a6a1b8724a9398a1662666))
+- Increase endValue for payment and refund ID columns in tables ([#4251](https://github.com/juspay/hyperswitch-control-center/pull/4251)) ([`f58eafa`](https://github.com/juspay/hyperswitch-control-center/commit/f58eafa2e1dfda10ada169fdb9493e9e500c6d2f))
+
+**Full Changelog:** [`2026.02.26.0...2026.02.27.0`](https://github.com/juspay/hyperswitch-control-center/compare/2026.02.26.0...2026.02.27.0)
+
+- - -
+
 ## 2026.02.26.0
 
 ### Features
